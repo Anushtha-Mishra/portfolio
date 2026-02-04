@@ -1,0 +1,262 @@
+/* BASE */
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  background:#0f0f1a;
+  color:#fff;
+}
+
+/* NAVBAR */
+.navbar{
+  background:#0f0f1a !important;
+}
+.navbar-brand{
+  color:#fff !important;
+}
+.navbar-nav a{
+  color:#fff;
+  position:relative;
+}
+.navbar-nav a:hover{
+  color:#fca61f;
+}
+.navbar-nav a::after{
+  content:"";
+  position:absolute;
+  width:0;
+  height:2px;
+  left:50%;
+  bottom:-5px;
+  background:#fca61f;
+  transition:0.3s;
+}
+.navbar-nav a:hover::after{
+  width:100%;
+  left:0;
+}
+
+/* BUTTON */
+.c-btn{
+  border:none;
+  background:#fca61f;
+  color:#000;
+  font-size:1.1rem;
+  border-radius:30px;
+  padding:10px 25px;
+  transition:0.3s;
+}
+.c-btn:hover{
+  background:#fff;
+}
+
+/* HOME */
+.home{
+  min-height:100vh;
+  background:radial-gradient(circle at top left, #1b1b3a, #0f0f1a);
+  display:flex;
+  align-items:center;
+  padding-top:100px;
+}
+
+.home-text h1{
+  color:#aaa;
+  font-size:2rem;
+}
+
+.home-text h2{
+  color:#fca61f;
+  font-size:3.8rem;
+  font-weight:700;
+  margin:10px 0 20px 0;
+}
+
+.home-text p{
+  color:#ccc;
+  max-width:520px;
+  line-height:1.7;
+  font-size:1.1rem;
+}
+
+.hero-btn{
+  margin-top:25px;
+  display:inline-block;
+  padding:12px 35px;
+  font-size:1.1rem;
+}
+
+.home-img{
+  display:flex;
+  justify-content:center;
+}
+
+.home-img img{
+  width:320px;
+  border-radius:25px;
+  box-shadow:0 0 40px rgba(252,166,31,0.4);
+  animation:floatimg 4s ease-in-out infinite;
+}
+
+@keyframes floatimg{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+  100%{transform:translateY(0);}
+}
+
+/* HEADINGS */
+.heading small{
+  color:#fca61f;
+  font-size:1.3rem;
+  letter-spacing:2px;
+}
+.heading h3{
+  color:#fff;
+  font-size:2.8rem;
+  font-weight:700;
+}
+
+/* SERVICES */
+.expertise{
+  padding:100px 0;
+  background:#0f0f1a;
+}
+.service-card{
+  background:#1b1b2f;
+  padding:35px 25px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+  transition:0.4s;
+  color:#fff;
+}
+.service-card p{
+  color:#ccc;
+}
+.service-card:hover{
+  transform:translateY(-15px);
+  box-shadow:0 15px 40px rgba(252,166,31,0.3);
+}
+.service-icon{
+  font-size:2.8rem;
+  background:#fca61f;
+  color:#000;
+  width:70px;
+  height:70px;
+  line-height:70px;
+  border-radius:50%;
+  margin:0 auto 20px auto;
+}
+
+/* SKILLS */
+.skill{
+  background:#12122b;
+  padding:80px 0;
+}
+.progress-card{
+  background:#1b1b2f;
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 4px 10px rgba(0,0,0,0.4);
+  width:160px;
+}
+.circular-progress{
+  position:relative;
+  height:130px;
+  width:130px;
+  border-radius:50%;
+  background:conic-gradient(#ededed 0deg, #ededed 0deg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:auto;
+}
+.circular-progress::before{
+  content:"";
+  position:absolute;
+  height:110px;
+  width:110px;
+  border-radius:50%;
+  background:#1b1b2f;
+}
+.progress-value{
+  position:relative;
+  font-size:1.3rem;
+  font-weight:600;
+  color:#fff;
+}
+
+/* PROJECTS */
+.portfolio{
+  padding:60px 0;              /* 80 se kam kiya */
+  background:#0f0f1a;
+}
+
+.portfolio .card{
+  border:none;
+  border-radius:20px;
+  background:#1b1b2f;
+  box-shadow:0 5px 15px rgba(0,0,0,0.4);
+  color:#fff;
+  overflow:hidden;             
+  transition:0.3s ease;
+}
+
+/* IMAGE CONTROL */
+.project-img{
+  height:240px;               
+}
+
+/* TEXT */
+.portfolio .card p{
+  color:#ccc;
+  font-size:0.95rem;
+}
+
+/* HOVER EFFECT (soft) */
+.portfolio .card:hover{
+  transform:translateY(-8px);  
+  box-shadow:0 10px 25px rgba(0,0,0,0.6);
+}
+
+
+/* CONTACT */
+.contact{
+  background:#12122b;
+  padding:80px 0;
+}
+.contact-details p{
+  font-size:1.1rem;
+  color:#ccc;
+}
+.contact-form input,
+.contact-form textarea{
+  background:#1b1b2f;
+  border:1px solid #333;
+  color:#fff;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color:#aaa;
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  color:#ccc;
+}
+footer p{
+  margin:0;
+  font-size:1rem;
+}
+
+/* BACK TO TOP */
+#btn-back-to-top{
+  position:fixed;
+  bottom:40px;
+  right:40px;
+  display:none;
+  font-size:1.4rem;
+  background:#fca61f;
+  color:#000;
+  border-radius:50%;
+  padding:10px 14px;
+}
